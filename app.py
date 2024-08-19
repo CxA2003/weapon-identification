@@ -3,6 +3,13 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 
+# Replace with model path
+def load_model():
+    model = tf.keras.models.load_model('weapon_class.h5')
+    return model
+
+model = load_model()
+
 st.title('Is there a weapon?')
 st.write('Streamlit app made by Cesar Fernandez')
 
@@ -10,7 +17,6 @@ page = st.sidebar.selectbox(
     'Page',
     ('Home', 'Weapon Identifier')
 )
-
 
 base_css = """
     <style>
@@ -128,31 +134,27 @@ if page == 'Weapon Identifier':
         margin: 0 auto;
     }
     .st-emotion-cache-7oyrr6, .st-emotion-cache-9ycgxx {
-      color: white;
+        color: white;
     }
     </style>
     """
 
     st.markdown(css_code, unsafe_allow_html=True)
     st.subheader("Model testing")
-    st.write('For now, the model is only compatible with .jpg images.')
+    st.write('Upload an image and test the model')
     uploaded_file = st.file_uploader(
         label="File uploading section",
-        type=['jpg'],
+        type=['jpg', 'jpeg', 'png'],
         accept_multiple_files=False
     )
 
     if uploaded_file is not None:
-        # Load the model
-        model = tf.keras.models.load_model('/content/weapon_class.h5')
-        model.summary()
-
         # Convert the uploaded file to an image
         img = Image.open(uploaded_file)
         st.image(img, caption="Uploaded by user", width=500)
 
         # Preprocess the image
-        img = img.resize((224, 224, 3))
+        img = img.resize((224, 224))
         img_array = np.array(img)
         img_array = tf.keras.applications.resnet.preprocess_input(img_array)
         img_array = np.expand_dims(img_array, axis=0)

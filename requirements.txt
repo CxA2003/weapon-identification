@@ -1,0 +1,10 @@
+streamlit
+tensorflow
+keras
+Pillow
+numpy
+matplotlib
+torch
+torchvision
+torchaudio
+openimages

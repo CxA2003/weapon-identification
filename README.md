@@ -14,7 +14,7 @@ This project employs the [VGG16](https://keras.io/api/applications/vgg/#vgg16-fu
 
 ## Installation and Usage
 
-No specific installation is required to run this project. The entire process can be executed using web-based tools like [Kaggle Notebooks](https://www.kaggle.com/code) and [Google Colab](https://colab.research.google.com/). Detailed instructions and notebooks are provided to guide users through running the application in these environments.
+No specific installation is required to run this project. The entire process can be executed using web-based tools like [Kaggle Notebooks](https://www.kaggle.com/code) and [Google Colab](https://colab.research.google.com/). However, a local environment can also be used to run this program. Detailed instructions and notebooks are provided to guide users through running the application in these environments.
 
 #### Steps to run on web-based tools:
 
@@ -33,6 +33,18 @@ No specific installation is required to run this project. The entire process can
     - Replace the `YOUR_AUTHTOKEN` with your own Authtoken
     - Run the whole notebook
     - The link to your running app will be displayed as the output of the last code block
+
+#### Steps to run on locally:
+
+- (**STRONGLY SUGGESTED**) Create a virtual environment using the tool of your preference, whether it is [Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) or [Python Venvs](https://docs.python.org/3/library/venv.html) (For this project, Python's `.venv` will be used)
+    - Command to create and activate an environment:
+        - Create venv: `python -m venv /path/to/new/virtual/environment`
+        - Activate venv: `source /path/to/new/virtual/environment`
+    - Install all packages after activating the environment:
+        - `pip install -r requirements.txt`
+- Replace content of notebooks to fit your local environment (paths are adapted to Kaggle and Google Colab)
+- Once the model is exported, replace the path of your model on the `app.py` file
+- Open a command line and run `python -m streamlit run app.py`, the app should run on your default web browser
 
 ## Features
 
