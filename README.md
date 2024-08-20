@@ -42,7 +42,11 @@ No specific installation is required to run this project. The entire process can
         - Activate venv: `source /path/to/new/virtual/environment`
     - Install all packages after activating the environment:
         - `pip install -r requirements.txt`
+<<<<<<< HEAD
+- Replace the content of notebooks to fit your local environment (paths are adapted to Kaggle and Google Colab)
+=======
 - Replace content of notebooks to fit your local environment (paths are adapted to Kaggle and Google Colab)
+>>>>>>> 340cc2901908e4fab16dbb92ee5b8fe91b190036
 - Once the model is exported, replace the path of your model on the `app.py` file
 - Open a command line and run `python -m streamlit run app.py`, the app should run on your default web browser
 
@@ -51,6 +55,38 @@ No specific installation is required to run this project. The entire process can
 - **Real-time Weapon Detection**: Upload an image, and the app will analyze it to determine if a gun is present.
 - **User-Friendly Interface**: The app is built using [Streamlit](https://streamlit.io/), ensuring a smooth and intuitive user experience.
 
+<<<<<<< HEAD
+## Results
+
+The model was tested using images from the **openimages** ([link](https://storage.googleapis.com/openimages/web/index.html)) website, the dataset is comprised of a total of 12,000 photos, 6,000 of them containing guns while the rest don't.
+
+#### Baseline:
+
+The baseline for predictions on this dataset is 0.5, meaning there's a 50% chance of correctly guessing if the image contains a gun or not
+
+#### Model's performance:
+
+The results of the model on the testing data are as follows:
+
+|                | Predicted: Gun | Predicted: Non-Gun |
+|----------------|:--------------:|:------------------:|
+| **Actual: Gun**      |      1517       |        30          |
+| **Actual: Non-Gun**  |      30        |        1517          |
+
+
+This model displays a precision of 0.98. Which could be considered a successful outcome, compared to our baseline.
+
+## Conclusions:
+
+- This model successfully classifies pictures based on the presence or absence of a gun. 
+- The 2% margin of error doesn't lean towards False Positives or False Negatives.
+- The resulting model's file size is considerably large (~110Mb), which may cause trouble when loading into the Streamlit app (Currently working on optimizing it)
+
+## License
+
+This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for more details.
+=======
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+>>>>>>> 340cc2901908e4fab16dbb92ee5b8fe91b190036
