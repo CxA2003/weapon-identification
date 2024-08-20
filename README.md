@@ -42,11 +42,7 @@ No specific installation is required to run this project. The entire process can
         - Activate venv: `source /path/to/new/virtual/environment`
     - Install all packages after activating the environment:
         - `pip install -r requirements.txt`
-<<<<<<< HEAD
-- Replace the content of notebooks to fit your local environment (paths are adapted to Kaggle and Google Colab)
-=======
 - Replace content of notebooks to fit your local environment (paths are adapted to Kaggle and Google Colab)
->>>>>>> 340cc2901908e4fab16dbb92ee5b8fe91b190036
 - Once the model is exported, replace the path of your model on the `app.py` file
 - Open a command line and run `python -m streamlit run app.py`, the app should run on your default web browser
 
@@ -54,8 +50,7 @@ No specific installation is required to run this project. The entire process can
 
 - **Real-time Weapon Detection**: Upload an image, and the app will analyze it to determine if a gun is present.
 - **User-Friendly Interface**: The app is built using [Streamlit](https://streamlit.io/), ensuring a smooth and intuitive user experience.
-
-<<<<<<< HEAD
+- 
 ## Results
 
 The model was tested using images from the **openimages** ([link](https://storage.googleapis.com/openimages/web/index.html)) website, the dataset is comprised of a total of 12,000 photos, 6,000 of them containing guns while the rest don't.
@@ -85,8 +80,3 @@ This model displays a precision of 0.98. Which could be considered a successful 
 ## License
 
 This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for more details.
-=======
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
->>>>>>> 340cc2901908e4fab16dbb92ee5b8fe91b190036
