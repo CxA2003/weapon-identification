@@ -6,7 +6,20 @@ The **Weapon Identifier** is a Streamlit app designed to help users determine if
 
 ## Dataset
 
-The dataset used for this project is composed of images extracted from the [OpenImages website](https://storage.googleapis.com/openimages/web/index.html) using the [openimages Python library](https://pypi.org/project/openimages/). These images were carefully selected and categorized to train the model in distinguishing between images containing guns and those without.
+The dataset used for this project is composed of images extracted from the [OpenImages website](https://storage.googleapis.com/openimages/web/index.html) using the [openimages Python library](https://pypi.org/project/openimages/). 
+
+These images were carefully selected and categorized to train the model in distinguishing between images containing guns and those without. 
+
+(The non-guns categories were chosen to provide great variation to the model's training)
+
+|                | Guns | Non-Guns |
+|----------------|:--------------:|:------------------:|
+| **Handgun**      |      2000       |        -          |
+| **Rifle**  |      2000        |        -          |
+| **Shotgun**  |      2000        |        -          |
+| **Cat**  |      -        |        2000          |
+| **Food**  |      -        |        2000          |
+| **Car**  |      -        |        2000          |
 
 ## Model Details
 
@@ -50,7 +63,7 @@ No specific installation is required to run this project. The entire process can
 
 - **Real-time Weapon Detection**: Upload an image, and the app will analyze it to determine if a gun is present.
 - **User-Friendly Interface**: The app is built using [Streamlit](https://streamlit.io/), ensuring a smooth and intuitive user experience.
-- 
+
 ## Results
 
 The model was tested using images from the **openimages** ([link](https://storage.googleapis.com/openimages/web/index.html)) website, the dataset is comprised of a total of 12,000 photos, 6,000 of them containing guns while the rest don't.
@@ -80,3 +93,7 @@ This model displays a precision of 0.98. Which could be considered a successful 
 ## License
 
 This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for more details.
+=======
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
