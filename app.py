@@ -16,7 +16,7 @@ model = load_model()
 
 st.title('Is there a weapon?')
 st.write('Streamlit app made by Cesar Fernandez')
-st.write('Us the menu on the left to access the Weapon Identifier')
+st.write('Use the menu on the left to access the Weapon Identifier')
 
 page = st.sidebar.selectbox(
     'Page',
@@ -171,10 +171,12 @@ if page == 'Weapon Identifier':
             st.write("And the result is...")
             st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
             if class_label == 0:
-                st.write(f"⚠️ Weapon detected! (Probability: {probability:.2f})")
+                st.write(f"⚠️ Weapon detected! (Probability: {probability:.3f})")
             else:
-                st.write(f"✅ No weapon detected. (Probability: {probability:.2f})")
+                st.write(f"✅ No weapon detected. (Probability: {probability:.3f})")
+
         except Exception as e:
             st.error(f"Error during prediction: {e}")
+            
     else:
         st.write("Please, upload an image!")
