@@ -93,7 +93,3 @@ This model displays a precision of 0.98. Which could be considered a successful 
 ## License
 
 This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for more details.
-=======
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
