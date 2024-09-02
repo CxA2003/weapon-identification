@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 streamlit
 tensorflow
 keras
@@ -8,15 +7,4 @@ matplotlib
 torch
 torchvision
 torchaudio
-=======
-streamlit
-tensorflow
-keras
-Pillow
-numpy
-matplotlib
-torch
-torchvision
-torchaudio
->>>>>>> 340cc2901908e4fab16dbb92ee5b8fe91b190036
 openimages
